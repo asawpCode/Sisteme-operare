@@ -2,7 +2,7 @@
 # submeniuri
 cap2 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Comanda 11"  "Comanda 12""Exit")
   local opt
   select opt in "${options[@]}"
   do
@@ -29,21 +29,29 @@ cap2 () {
               ;;
            "Comanda 6")
               echo "shutdown -h now"
-              whatis shutdown -h now
+             whatis shutdown -h now   
+              ;;           
+           "Comanda 7")        
+              echo "shutdown -r now"
+              shutdown -r now
               ;;
-           "Comanda 7")
+           "Comanda 8")        
+              echo "shutdown -r +10"
+              shutdown -r +10
+              ;;              
+           "Comanda 9")
               echo "su uso"
               su uso
               ;;
-           "Comanda 8")
+           "Comanda 10")
               echo "sudo su"
               sudo su
               ;;
-           "Comanda 9")
+           "Comanda 11")
               echo "apt -get update"
               apt -get update
               ;;
-           "Comanda 10")
+           "Comanda 12")
               echo "apt -get dist -upgrade"
               apt -get dist -upgrade
               ;;
@@ -60,7 +68,7 @@ cap2 () {
 
 cap3 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Comanda 11" "Comanda 12" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Comanda 11" "Comanda 12" "Comanda 13" "Comanda 14" "Comanda 15" "Comanda 16" "Comanda 17" "Exit")
   local opt
   select opt in "${options[@]}"
   do
@@ -74,42 +82,62 @@ cap3 () {
               ls -1 /etc/shadow
               ;;
           "Comanda 3")
+              echo "head -1 /etc/passwd"
+              ls -1 /etc/shadow
+              ;;              
+          "Comanda 4")
               echo "passwd guest"
               passwd guest
               ;;
-          "Comanda 4")
+          "Comanda 5")
               echo "adduser uso"
               adduser uso
               ;;
-           "Comanda 5")
+          "Comanda 6")
+              echo "deluser uso"
+              deluser uso
+              ;;              
+           "Comanda 7")
               echo "addgroup usogroup"
               addgroup usogroup
               ;;
-           "Comanda 6")
+              "Comanda 8")
+              echo "delgroup usogroup"
+              delgroup usogroup
+              ;;     
+            "Comanda 9")
+              echo "useradd -m -d/ home/ test test -"
+              useradd -m -d/ home/ test test
+              ;;                      
+           "Comanda 10")
               echo "cd -"
               cd -
               ;;
-           "Comanda 7")
+           "Comanda 11")
               echo "dpkg -L coreutils"
               dpkg -L coreutils
               ;;
-           "Comanda 8")
+           "Comanda 12")
               echo "cat /etc/apt/sources.list"
               cat /etc/apt/sources.list
               ;;
-           "Comanda 9")
+              "Comanda 13")
+              echo "update-alternatives --display editor"
+              update-alternatives --display editor
+              ;;
+           "Comanda 14")
               echo "apt-get update"
               apt-get update
               ;;
-           "Comanda 10")
+           "Comanda 15")
               echo "apt-cache search hevea"
               apt-cache search hevea
               ;;
-           "Comanda 11")
+           "Comanda 16")
               echo "apt-get install apt-file"
               apt-get install apt-file
               ;;
-           "Comanda 12")
+           "Comanda 17")
               echo "apt-get update"
               apt-get update
               ;;
@@ -147,30 +175,50 @@ cap4 () {
               ls -1
               ;;
            "Comanda 5")
+              echo "ls -"
+              ls -
+              ;;
+          "Comanda 6")
+              echo "ls -1 -"
+              ls -1 -
+              ;;
+           "Comanda 7")
+              echo "ls -al"
+              ls -al
+              ;;                        
+           "Comanda 8")
               echo "file poza.png"
               info file
               ;;
-           "Comanda 6")
+           "Comanda 9")
               echo "ls -alh"
               ls -alh
               ;;
-           "Comanda 7")
+            "Comanda 10")
+              echo "ls -R dir1"
+              ls -R dir1
+              ;;
+           "Comanda 11")
               echo "touch fisier1"
               touch fisier1
               ;;
-           "Comanda 8")
+           "Comanda 12")
+              echo "touch fisier2.txt"
+              touch fisier2.txt
+              ;;
+           "Comanda 13")
               echo "mv fisier1 fisier2"
               cat /etc/apt/sources.list
               ;;
-           "Comanda 9")
+           "Comanda 14")
               echo "mail"
               info mail
               ;;
-           "Comanda 10")
+           "Comanda 15")
               echo "find /usr -name stat"
               find /usr -name stat
               ;;
-            "Comanda 10")
+            "Comanda 16")
               echo "type cd"
               type cd
               ;;

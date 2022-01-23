@@ -153,7 +153,7 @@ cap3 () {
 
 cap4 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Comanda 11" "Comanda 12" "Comanda 13" "Comanda 14" "Comanda 15" "Comanda 16" "Exit")
   local opt
   select opt in "${options[@]}"
   do
@@ -330,7 +330,7 @@ cap6 () {
 
 cap7 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Comanda 10" "Comanda 11" "Exit")
   local opt
   select opt in "${options[@]}"
   do
@@ -391,7 +391,7 @@ cap7 () {
 
 cap8 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Exit")
   local opt
   select opt in "${options[@]}"
   do

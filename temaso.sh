@@ -289,7 +289,7 @@ cap5 () {
 }
 cap6 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Exit")
   local opt
   select opt in "${options[@]}"
   do
@@ -306,10 +306,18 @@ cap6 () {
               echo "shutdown -h"
               info shutdown -h
               ;;
-          "Comanda 4")
+           "Comanda 4")
+              echo "half"
+              halt
+              ;;
+          "Comanda 5")
               echo "grub"
               grub
               ;;
+          "Comanda 6")
+              echo "find"
+              find
+              ;;              
             "Exit")
               return
               ;;
@@ -358,7 +366,19 @@ cap7 () {
            "Comanda 8")
               echo "cat /proc/meminfo"
               cat /proc/meminfo
-              ;;                            
+              ;;       
+           "Comanda9")
+              echo "uname -r"
+              uname -r
+              ;;     
+           "Comanda 10")
+              echo "lsusb"
+              lsusb
+              ;;       
+            "Comanda 11")
+              echo "sfdisk"
+              sfdisk
+              ;;               
             "Exit")
               return
               ;;
@@ -399,7 +419,19 @@ cap8 () {
            "Comanda 6")
               echo "traceroute rol.ro"
               traceroute rol.ro
-              ;;                         
+              ;;    
+            "Comanda 7")
+              echo "ifup"
+              ifup
+              ;;  
+             "Comanda 8")
+              echo "ifdown"
+              ifdown
+              ;;  
+            "Comanda 9")
+              echo "dhclient"
+              dhclient
+              ;;                       
             "Exit")
               return
               ;;
@@ -412,14 +444,14 @@ cap8 () {
 
 cap9 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Comanda 9" "Exit")
   local opt
   select opt in "${options[@]}"
   do
       case $opt in
           "Comanda 1")
-              echo "notstat --tcp --listening"
-              notstat --tcp --listening
+              echo "netstat --tcp --listening"
+              netstat --tcp --listening
               ;;
           "Comanda 2")
               echo "telnet reddit.com"
@@ -432,7 +464,27 @@ cap9 () {
           "Comanda 4")
               echo "telnet google.ro 80"
               telnet google.ro 80
-              ;;                         
+              ;;
+           "Comanda 5")
+              echo "ssh"
+              ssh
+              ;;   
+           "Comanda 6")
+              echo "scp"
+              scp
+              ;;
+           "Comanda 7")
+              echo "ssh-copy-id"
+              telnet google.ro 80
+              ;;      
+            "Comanda 8")
+              echo "wget"
+              wget
+              ;; 
+             "Comanda 9")
+              echo "ftp"
+              ftp
+              ;;                 
             "Exit")
               return
               ;;
@@ -492,9 +544,44 @@ cap10 () {
   done
 }
 
+cap11 () {
+  local PS3='Selectati comanda: '
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Exit")
+  local opt
+  select opt in "${options[@]}"
+  do
+      case $opt in
+          "Comanda 1")
+              echo "gcc"
+              gcc
+              ;;
+          "Comanda 2")
+              echo "gnat"
+              gnat
+              ;;
+          "Comanda 3")
+              echo "make"
+              make
+              ;;
+          "Comanda 4")
+              echo "objdump"
+              objdump
+              ;;
+          "Comanda 5")
+              echo "gcj"
+              gcj
+              ;;                                          
+            "Exit")
+              return
+              ;;
+          *) echo "Optiune invalida $REPLY";;
+      esac
+  done
+}
+
 cap12 () {
   local PS3='Selectati comanda: '
-  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Exit")
+  local options=("Comanda 1" "Comanda 2" "Comanda 3" "Comanda 4" "Comanda 5" "Comanda 6" "Comanda 7" "Comanda 8" "Exit")
   local opt
   select opt in "${options[@]}"
   do
@@ -503,8 +590,33 @@ cap12 () {
               echo "Hello, World!"
               ;;
           "Comanda 2")
-              echo "#comentariu"
+              echo "time"
+              time
               ;;
+          "Comanda 3")
+              echo "printf"
+              printf
+              ;;
+          "Comanda 4")
+              echo "exit"
+              exit
+              ;;
+          "Comanda 5")
+              echo "export"
+              export
+              ;;     
+          "Comanda 6")
+              echo "export"
+              export
+              ;;   
+          "Comanda 7")
+              echo "read"
+              read
+              ;;   
+          "Comanda 8")
+              echo "tac"
+              tac
+              ;;                                                                                                   
             "Exit")
               return
               ;;
@@ -515,7 +627,7 @@ cap12 () {
 
 # main menu
 PS3='Please enter main option: '
-options=("Capitolul 2" "Capitolul 3" "Capitolul 4" "Capitolul 5" "Capitolul 6" "Capitolul 7" "Capitolul 8" "Capitolul 9" "Capitolul 10" "Capitolul 12" "Main menu quit")
+options=("Capitolul 2" "Capitolul 3" "Capitolul 4" "Capitolul 5" "Capitolul 6" "Capitolul 7" "Capitolul 8" "Capitolul 9" "Capitolul 10"  "Capitolul 11" "Capitolul 12" "Main menu quit")
 select opt in "${options[@]}"
 do
     case $opt in
